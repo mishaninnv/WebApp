@@ -1,0 +1,13 @@
+﻿@model User
+
+<body>
+    <div>ФИО: @Model.FIO</div>
+    <div>Телефон: @Model.Phone</div>
+    <div>Email: @Model.Email</div>
+    <div>Последний вход: @Model.LastLogin</div>
+    <div>
+        <form method="get" asp-controller="cabinet" asp-action="logout">
+            <button class="btn btn-primary" type="submit" style="margin:5px">Выход</button>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,37 @@
+﻿@model RegisterRequest
+
+<body class="card-body">
+    <div>
+        <div class="modal-header">
+            <label>Форма регистрации</label>
+        </div>
+        <form asp-action="register" method="post">
+            <div class="card-group">
+                <label for="FIO">ФИО:</label>
+                <input type="text" asp-for="FIO" class="form-control" />
+                <span asp-validation-for="FIO" class="text-danger"></span>
+            </div>
+            <div class="card-group">
+                <label for="Phone">Номер телефона:</label>
+                <input type="tel" asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="card-group">
+                <label for="Email">Email:</label>
+                <input type="email" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="card-group">
+                <label for="Password">Пароль:</label>
+                <input type="password" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="card-group">
+                <label for="PasswordConfirm">Подтверждение пароля:</label>
+                <input type="password" asp-for="PasswordConfirm" class="form-control" />
+                <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin:5px">Регистрация</button>
+        </form>
+    </div>
+</body>

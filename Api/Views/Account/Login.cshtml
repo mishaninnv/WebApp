@@ -1,0 +1,23 @@
+﻿@model LoginRequest
+
+<body class="card-body">
+    <div>
+        <div class="modal-header">
+            <label>Форма авторизации</label>
+        </div>
+        <form asp-action="login" method="post">
+            <div class="card-group">
+                <label for="Phone">Номер телефона:</label>
+                <input type="text" asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="card-group">
+                <label for="Password">Пароль:</label>
+                <input type="password" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin:5px">Авторизироваться</button>
+        </form>
+        <a asp-controller="account" asp-action="register">Регистрация</a>
+    </div>
+</body>
